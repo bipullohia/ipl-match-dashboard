@@ -38,6 +38,11 @@ public class TeamController {
     In the function use - this.teamRepo.findByTeamName(teamName);
     */
 
+    @GetMapping(value="teams")
+    public Iterable<Team> getAllTeams(){
+        return teamRepo.findAll();
+    }
+
     @GetMapping(value="team/{teamName}")
     public Team getTeamDetails(@PathVariable String teamName){
         Team team = teamRepo.findByTeamName(teamName);        

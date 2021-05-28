@@ -1,0 +1,28 @@
+.HomePage {
+
+    .teams-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+
+        & div {
+            height: 150px;
+            text-align: center;
+            padding-top: 50px;
+            border: 1px solid white;
+        }
+    }
+
+    .home-page-header {
+        font-size: 4rem;
+        margin-bottom: 10px;
+    }
+
+    .home-page-subheader {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+   
+}
