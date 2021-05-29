@@ -11,7 +11,7 @@
 	<groupId>com.bipullohia</groupId>
 	<artifactId>ipl-dashboard</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>ipl-dashboard</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>

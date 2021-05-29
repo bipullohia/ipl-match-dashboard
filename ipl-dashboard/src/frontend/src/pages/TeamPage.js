@@ -15,7 +15,7 @@ export const TeamPage = () => {
     () => {
       
       const getMatches = async () => {
-        const resp = await fetch(`http://localhost:8080/team/${teamName}`);
+        const resp = await fetch(`${process.env.REACT_APP_ROOT_ENDPOINT_URL}/team/${teamName}`);
         const matchData = await resp.json();
         setTeam(matchData);
       }
@@ -47,7 +47,7 @@ export const TeamPage = () => {
         <h3 className="latest-matches">Latest Matches</h3>
         <MatchDetailsCard teamName = {teamName} match = {team.matchesPlayed[0]}/>
       </div>
-      {team.matchesPlayed.slice(1).map(match => <MatchSmallCard teamName = {teamName} match = {match} />
+      {team.matchesPlayed.slice(1).map(match => <MatchSmallCard key={match.id} teamName = {teamName} match = {match} />
       )}
       <div className="more-link">
         <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More ></Link>
